@@ -1,7 +1,11 @@
+import CallBack from "../components/hooks/CallBack";
+import Memo from "../components/hooks/Memo";
+
 function Home() {
       return (
         <div>
-          <h1>This is the home page</h1>
+          {/* <Memo/> */}
+          <CallBack />
         </div>
       );
     }
