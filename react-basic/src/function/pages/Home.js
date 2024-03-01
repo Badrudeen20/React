@@ -2,6 +2,9 @@
 import Memo from "../components/hooks/Memo"; */
 /* import Context from "../components/hooks/Context"; */
 import Custom from "../components/hooks/Custom";
+import LayoutEffect from "../components/hooks/LayoutEffect";
+import Ref from "../components/hooks/Ref";
+import Transition from "../components/hooks/Transition";
 // import Reducer from "../components/hooks/Reducer";
 
 function Home() {
@@ -11,7 +14,10 @@ function Home() {
           {/* <CallBack /> */}
           {/* <Reducer /> */}
           {/* <Context /> */}
-          <Custom />
+          {/* <Custom /> */}
+          {/* <LayoutEffect /> */}
+          {/* <Ref /> */}
+          <Transition />
         </div>
       );
     }

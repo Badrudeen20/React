@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { prisma } from "@/db"
 import { TodoList,UpdateList } from "@/components/TodoList";
+import Navbar from "@/components/Navbar";
 
 
 function getTodos() {
@@ -28,7 +29,8 @@ export default async function Home() {
   const todos = await getTodos()
   return (
   <>
-     <header className="flex justify-between items-center mb-4">
+     <Navbar />
+     {/* <header className="flex justify-between items-center mb-4">
         <h1 className="text-2xl">Todo List</h1>
         <Link
           className="border border-slate-300 text-slate-300 px-2 py-1 rounded hover:bg-slate-700 focus-within:bg-slate-700 outline-none"
@@ -41,7 +43,7 @@ export default async function Home() {
         {todos.map(todo => (
           <TodoList key={todo.id} {...todo} toggleTodo={toggleTodo} />
         ))}
-      </ul>
+      </ul> */}
   </>
   );
 }

@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { Suspense } from 'react'
+import { Link, Outlet } from 'react-router-dom'
 export default function Navbar() {
   return (
     <>
@@ -15,8 +15,16 @@ export default function Navbar() {
            About
           </Link>
         </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/content">
+           Content
+          </Link>
+        </li>
       </ul>
-    </nav>
+      </nav>
+      <Suspense fallback={<>...</>}>
+        <Outlet />
+      </Suspense>
     </>
   )
 }
