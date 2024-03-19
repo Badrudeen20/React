@@ -1,7 +1,7 @@
 import React from 'react'
-import useCounter from '../custom/useCounter'
-import useToggle from '../custom/useToggle';
-import { useLocalStorage } from '../custom/useStorage';
+import useCounter from '../useCounter'
+import useToggle from './useToggle';
+import { useLocalStorage } from './useStorage';
 export default function Custom() {
   const { count, increment, decrement, reset } = useCounter(0, 2);
   const [value,toggleValue] = useToggle(false)

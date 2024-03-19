@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import HOC from "../../class/components/Hoc";
+import HOC from "../../../class/components/Hoc";
 
 const UsersList = ({ data }) => {
   /* const [list,setList] = useState([])

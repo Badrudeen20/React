@@ -9,6 +9,7 @@ export default function Navbar() {
       {to:'/',className:'hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium',name:'Home'},
       {to:'/team',className:'text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium',name:'Team'},
       {to:'/project',className:'text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium',name:'Project'},
+      {to:'/hooks/reducer',className:'text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium',name:'Hooks'},
   ]
   
   return (

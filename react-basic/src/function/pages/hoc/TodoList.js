@@ -1,5 +1,5 @@
 import React from "react";
-import HOC from "../../class/components/Hoc";
+import HOC from "../../../class/components/Hoc";
 
 const TodoList = ({ data }) => {
   let renderTodos = data.map((todo) => {

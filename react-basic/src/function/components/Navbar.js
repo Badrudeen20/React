@@ -15,11 +15,11 @@ export default function Navbar() {
            About
           </Link>
         </li>
-        <li className="nav-item">
+       {/*  <li className="nav-item">
           <Link className="nav-link" to="/content">
            Content
           </Link>
-        </li>
+        </li> */}
       </ul>
       </nav>
       <Suspense fallback={<>...</>}>

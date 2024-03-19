@@ -31,7 +31,7 @@ export default function Navbar() {
               <Link class="nav-link "  to="/debounc">Debounce</Link>
             </li> */}
             <li class="nav-item">
-              <Link class="nav-link "  to="/theme">Theme</Link>
+              <Link class="nav-link "  to="/interview">Form</Link>
             </li>
            
           </ul>

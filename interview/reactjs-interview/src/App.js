@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 import Project from "./pages/Project";
 import Team from "./pages/Team";
+import Reducer from "./pages/hooks/Reducer";
 function App() {
  
   return (
@@ -21,7 +22,10 @@ function App() {
         <Route path="/" element={<Navbar />}>
           <Route path="/" element={<Home />} />   
           <Route path="/team" element={<Team />} />   
-          <Route path="/project" element={<Project />} />   
+          <Route path="/project" element={<Project />} />    
+          <Route path="hooks">
+                <Route path=":hook" element={<Reducer />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>

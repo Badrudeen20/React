@@ -1,12 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-/* import App from './class/App'; */
-import App from './function/App';
+import App from './class/App';
+/* import App from './function/App'; */
 import reportWebVitals from './reportWebVitals';
 import {
-  useQuery,
-  useMutation,
-  useQueryClient,
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'

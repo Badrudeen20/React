@@ -1,9 +1,12 @@
 import React from 'react'
+import Memo from '../components/memo/Memo'
 
 export function About() {
     return (
-        <div>
-            <h1>This is the about page</h1>
-        </div>
+        <>
+         <div className='container'>
+           <Memo />
+         </div>
+        </>
     )
 }

@@ -4,6 +4,7 @@ import AboutPage from './pages/About';
 import HomePage from './pages/Home';
 import React from 'react';
 import Navbar from './components/Navbar';
+import StorePage from './pages/Store';
 
 
 const App:React.FC = ()=> {
@@ -16,7 +17,7 @@ const App:React.FC = ()=> {
                     <Route index element={<AboutPage />} />
                     <Route path=":number" element={<AboutPage />} />
                 </Route>
-               
+                <Route path="/store" element={<StorePage />} />
             </Routes>
         </BrowserRouter>
   );

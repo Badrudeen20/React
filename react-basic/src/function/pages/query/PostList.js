@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {useMutation, useQuery, useQueryClient} from "@tanstack/react-query";
-import {fetchPosts, fetchTags, addPost} from "../../api/api";
+import {fetchPosts, fetchTags, addPost} from "./api/api";
 
 export default function PostList() {
   const [page, setPage] = useState(1);
@@ -104,11 +104,10 @@ export default function PostList() {
             <span>{page}</span>
             <button
             onClick={() => {
-                  if (!isPlaceholderData && postData?.next) {
+                if(!isPlaceholderData && postData?.next) {
                   setPage((old) => old + 1);
-                  }
+                }
             }}
-            // Disable the Next Page button until we know a next page is available
             disabled={isPlaceholderData || !postData?.next}
             >
             Next Page

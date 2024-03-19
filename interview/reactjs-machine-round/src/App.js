@@ -12,6 +12,7 @@ import Clock from "./pages/clock/Clock";
 import FileManager from "./pages/fileManager/Manager";
 import InputForm from "./pages/debouning/InputForm";
 import Theme from "./pages/ThemeContext/Theme";
+import Form from "./pages/interview/Form";
 
 function App() {
  
@@ -24,6 +25,7 @@ function App() {
           <Route path="/file-manager" element={<FileManager />} />   
           <Route path="/debounc" element={<InputForm />} />   */} 
           <Route path="/theme" element={<Theme />} />   
+          <Route path="/interview" element={<Form />} />   
         </Route>
       </Routes>
     </BrowserRouter>
