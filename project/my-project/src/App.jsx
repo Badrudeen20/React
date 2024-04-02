@@ -1,7 +1,7 @@
-// import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import {useState,useLayoutEffect} from "react"
-/* import Home from './pages/Home.jss';
-import  SidebarMenu  from './components/SiderBar'; */
+import Home from './pages/Home.jsx';
+import  SidebarMenu  from './components/SiderBar';
 
 function App() {
   const [size, setSize] = useState([0, 0]);
@@ -19,6 +19,7 @@ function App() {
   }, []);
   const sidebar = {
     width:"280px",
+    height:"100vh"
   }
   if(size[0] < 540 && toggle==false){
     sidebar.position = 'absolute';
@@ -30,7 +31,7 @@ function App() {
   return (
     <>
       <div className='flex'>
-        {/* <div className={`flex-none w-${flexFirst}`}>
+        <div className={`flex-none w-${flexFirst}`}>
            <SidebarMenu sidebar={sidebar} />
         </div>
         <div className={`flex-auto w-${flexSecond}`}>
@@ -39,8 +40,8 @@ function App() {
               <Route path="/" element={<Home handleSidebar={setToggle} />} />
             </Routes>
           </BrowserRouter>
-        </div> */}
-        Badru
+        </div>
+       
       </div>
       
     </>
