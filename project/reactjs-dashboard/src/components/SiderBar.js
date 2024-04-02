@@ -2,7 +2,7 @@ import React, { Suspense } from 'react'
 import { Link, Outlet } from 'react-router-dom'
 
 import {
-  IconButton,
+ 
   Typography,
   List,
   ListItem,
@@ -12,9 +12,9 @@ import {
   Accordion,
   AccordionHeader,
   AccordionBody,
-  Alert,
+
   Input,
-  Drawer,
+ 
   Card,
 } from "@material-tailwind/react";
 import {
@@ -28,34 +28,22 @@ import {
 import {
   ChevronRightIcon,
   ChevronDownIcon,
-  CubeTransparentIcon,
+
   MagnifyingGlassIcon,
-  Bars3Icon,
-  XMarkIcon,
+
 } from "@heroicons/react/24/outline";
  
-export default function SidebarMenu() {
+export default function SidebarMenu({sidebar}) {
   const [open, setOpen] = React.useState(0);
-  const [openAlert, setOpenAlert] = React.useState(true);
-  const [isDrawerOpen, setIsDrawerOpen] = React.useState(false);
- 
+
   const handleOpen = (value) => {
     setOpen(open === value ? 0 : value);
   };
- 
-  const openDrawer = () => setIsDrawerOpen(true);
-  const closeDrawer = () => setIsDrawerOpen(false);
- 
+
   return (
     <>
-      <IconButton variant="text" size="lg" onClick={openDrawer}>
-        {isDrawerOpen ? (
-          <XMarkIcon className="h-8 w-8 stroke-2" />
-        ) : (
-          <Bars3Icon className="h-8 w-8 stroke-2" />
-        )}
-      </IconButton>
-      <Drawer open={isDrawerOpen} onClose={closeDrawer}>
+     
+      <div style={sidebar} className='border'>
         <Card
           color="transparent"
           shadow={false}
@@ -201,7 +189,7 @@ export default function SidebarMenu() {
               Log Out
             </ListItem>
           </List>
-          <Alert
+         {/*  <Alert
             open={openAlert}
             className="mt-auto"
             onClose={() => setOpenAlert(false)}
@@ -233,9 +221,11 @@ export default function SidebarMenu() {
                 Upgrade Now
               </Typography>
             </div>
-          </Alert>
+          </Alert> */}
         </Card>
-      </Drawer>
+      </div>
+        
+      
       <Suspense fallback={<>...</>}>
          <Outlet />
       </Suspense>
